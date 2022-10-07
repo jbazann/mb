@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="unifilar290922" nsURI="http://www.example.org/unifilar290922"
+    nsPrefix="unifilar290922">
+  <eClassifiers xsi:type="ecore:EClass" name="OneLineDiagram">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="load" lowerBound="1" upperBound="-1"
+        eType="#//Load" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generator" lowerBound="1"
+        upperBound="-1" eType="#//Generator" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="line" lowerBound="1" upperBound="-1"
+        eType="#//Line" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bus" lowerBound="1" upperBound="-1"
+        eType="#//Bus" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Load">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loadBusAssociation" lowerBound="1"
+        eType="#//LoadBusAssociation" eOpposite="#//LoadBusAssociation/load"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bus">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="line" upperBound="-1" eType="#//Line"
+        eOpposite="#//Line/bus"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loadBusAssociation" upperBound="-1"
+        eType="#//LoadBusAssociation" eOpposite="#//LoadBusAssociation/bus"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatorBusAssociation"
+        upperBound="-1" eType="#//GeneratorBusAssociation" eOpposite="#//GeneratorBusAssociation/bus"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Line">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bus" lowerBound="2" upperBound="2"
+        eType="#//Bus" eOpposite="#//Bus/line"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LoadBusAssociation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bus" lowerBound="1" eType="#//Bus"
+        eOpposite="#//Bus/loadBusAssociation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="load" lowerBound="1" eType="#//Load"
+        eOpposite="#//Load/loadBusAssociation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Generator">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatorBusAssociation"
+        lowerBound="1" eType="#//GeneratorBusAssociation" eOpposite="#//GeneratorBusAssociation/generator"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeneratorBusAssociation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generator" lowerBound="1"
+        eType="#//Generator" eOpposite="#//Generator/generatorBusAssociation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bus" lowerBound="1" eType="#//Bus"
+        eOpposite="#//Bus/generatorBusAssociation"/>
+  </eClassifiers>
+</ecore:EPackage>

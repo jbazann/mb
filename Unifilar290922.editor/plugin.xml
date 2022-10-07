@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated unifilar290922 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="unifilar290922.presentation.Unifilar290922ModelWizardID"
+            name="%_UI_Unifilar290922ModelWizard_label"
+            class="unifilar290922.presentation.Unifilar290922ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Unifilar290922ModelFile.gif">
+         <description>%_UI_Unifilar290922ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated unifilar290922 -->
+      <editor
+            id="unifilar290922.presentation.Unifilar290922EditorID"
+            name="%_UI_Unifilar290922Editor_label"
+            icon="icons/full/obj16/Unifilar290922ModelFile.gif"
+            extensions="unifilar290922"
+            class="unifilar290922.presentation.Unifilar290922Editor"
+            contributorClass="unifilar290922.presentation.Unifilar290922ActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
