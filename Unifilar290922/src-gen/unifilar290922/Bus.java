@@ -40,29 +40,29 @@ public interface Bus extends EObject {
 	EList<Line> getLine();
 
 	/**
-	 * Returns the value of the '<em><b>Load Bus Association</b></em>' reference list.
+	 * Returns the value of the '<em><b>Load Bus Association</b></em>' containment reference list.
 	 * The list contents are of type {@link unifilar290922.LoadBusAssociation}.
 	 * It is bidirectional and its opposite is '{@link unifilar290922.LoadBusAssociation#getBus <em>Bus</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Load Bus Association</em>' reference list.
+	 * @return the value of the '<em>Load Bus Association</em>' containment reference list.
 	 * @see unifilar290922.Unifilar290922Package#getBus_LoadBusAssociation()
 	 * @see unifilar290922.LoadBusAssociation#getBus
-	 * @model opposite="bus"
+	 * @model opposite="bus" containment="true"
 	 * @generated
 	 */
 	EList<LoadBusAssociation> getLoadBusAssociation();
 
 	/**
-	 * Returns the value of the '<em><b>Generator Bus Association</b></em>' reference list.
+	 * Returns the value of the '<em><b>Generator Bus Association</b></em>' containment reference list.
 	 * The list contents are of type {@link unifilar290922.GeneratorBusAssociation}.
 	 * It is bidirectional and its opposite is '{@link unifilar290922.GeneratorBusAssociation#getBus <em>Bus</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Generator Bus Association</em>' reference list.
+	 * @return the value of the '<em>Generator Bus Association</em>' containment reference list.
 	 * @see unifilar290922.Unifilar290922Package#getBus_GeneratorBusAssociation()
 	 * @see unifilar290922.GeneratorBusAssociation#getBus
-	 * @model opposite="bus"
+	 * @model opposite="bus" containment="true"
 	 * @generated
 	 */
 	EList<GeneratorBusAssociation> getGeneratorBusAssociation();

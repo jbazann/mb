@@ -47,24 +47,24 @@ public interface GeneratorBusAssociation extends EObject {
 	void setGenerator(Generator value);
 
 	/**
-	 * Returns the value of the '<em><b>Bus</b></em>' reference.
+	 * Returns the value of the '<em><b>Bus</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link unifilar290922.Bus#getGeneratorBusAssociation <em>Generator Bus Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bus</em>' reference.
+	 * @return the value of the '<em>Bus</em>' container reference.
 	 * @see #setBus(Bus)
 	 * @see unifilar290922.Unifilar290922Package#getGeneratorBusAssociation_Bus()
 	 * @see unifilar290922.Bus#getGeneratorBusAssociation
-	 * @model opposite="generatorBusAssociation" required="true"
+	 * @model opposite="generatorBusAssociation" required="true" transient="false"
 	 * @generated
 	 */
 	Bus getBus();
 
 	/**
-	 * Sets the value of the '{@link unifilar290922.GeneratorBusAssociation#getBus <em>Bus</em>}' reference.
+	 * Sets the value of the '{@link unifilar290922.GeneratorBusAssociation#getBus <em>Bus</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bus</em>' reference.
+	 * @param value the new value of the '<em>Bus</em>' container reference.
 	 * @see #getBus()
 	 * @generated
 	 */

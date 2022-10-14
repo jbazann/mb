@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -49,7 +49,7 @@ public class BusImpl extends MinimalEObjectImpl.Container implements Bus {
 	protected EList<Line> line;
 
 	/**
-	 * The cached value of the '{@link #getLoadBusAssociation() <em>Load Bus Association</em>}' reference list.
+	 * The cached value of the '{@link #getLoadBusAssociation() <em>Load Bus Association</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLoadBusAssociation()
@@ -59,7 +59,7 @@ public class BusImpl extends MinimalEObjectImpl.Container implements Bus {
 	protected EList<LoadBusAssociation> loadBusAssociation;
 
 	/**
-	 * The cached value of the '{@link #getGeneratorBusAssociation() <em>Generator Bus Association</em>}' reference list.
+	 * The cached value of the '{@link #getGeneratorBusAssociation() <em>Generator Bus Association</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGeneratorBusAssociation()
@@ -107,7 +107,7 @@ public class BusImpl extends MinimalEObjectImpl.Container implements Bus {
 	 */
 	public EList<LoadBusAssociation> getLoadBusAssociation() {
 		if (loadBusAssociation == null) {
-			loadBusAssociation = new EObjectWithInverseResolvingEList<LoadBusAssociation>(LoadBusAssociation.class,
+			loadBusAssociation = new EObjectContainmentWithInverseEList<LoadBusAssociation>(LoadBusAssociation.class,
 					this, Unifilar290922Package.BUS__LOAD_BUS_ASSOCIATION,
 					Unifilar290922Package.LOAD_BUS_ASSOCIATION__BUS);
 		}
@@ -121,7 +121,7 @@ public class BusImpl extends MinimalEObjectImpl.Container implements Bus {
 	 */
 	public EList<GeneratorBusAssociation> getGeneratorBusAssociation() {
 		if (generatorBusAssociation == null) {
-			generatorBusAssociation = new EObjectWithInverseResolvingEList<GeneratorBusAssociation>(
+			generatorBusAssociation = new EObjectContainmentWithInverseEList<GeneratorBusAssociation>(
 					GeneratorBusAssociation.class, this, Unifilar290922Package.BUS__GENERATOR_BUS_ASSOCIATION,
 					Unifilar290922Package.GENERATOR_BUS_ASSOCIATION__BUS);
 		}

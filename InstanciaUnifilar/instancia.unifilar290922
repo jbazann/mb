@@ -1,7 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<unifilar290922:OneLineDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:unifilar290922="http://www.example.org/unifilar290922">
-  <line bus="//@bus.0 //@bus.1"/>
-  <bus line="//@line.0"/>
-  <bus line="//@line.0"/>
-  <bus/>
-</unifilar290922:OneLineDiagram>
+<unifilar290922:OneLineDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:unifilar290922="http://www.example.org/unifilar290922"/>

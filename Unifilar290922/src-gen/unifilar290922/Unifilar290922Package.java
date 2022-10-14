@@ -176,7 +176,7 @@ public interface Unifilar290922Package extends EPackage {
 	int BUS__LINE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Load Bus Association</b></em>' reference list.
+	 * The feature id for the '<em><b>Load Bus Association</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -185,7 +185,7 @@ public interface Unifilar290922Package extends EPackage {
 	int BUS__LOAD_BUS_ASSOCIATION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Generator Bus Association</b></em>' reference list.
+	 * The feature id for the '<em><b>Generator Bus Association</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -259,7 +259,7 @@ public interface Unifilar290922Package extends EPackage {
 	int LOAD_BUS_ASSOCIATION = 4;
 
 	/**
-	 * The feature id for the '<em><b>Bus</b></em>' reference.
+	 * The feature id for the '<em><b>Bus</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -351,7 +351,7 @@ public interface Unifilar290922Package extends EPackage {
 	int GENERATOR_BUS_ASSOCIATION__GENERATOR = 0;
 
 	/**
-	 * The feature id for the '<em><b>Bus</b></em>' reference.
+	 * The feature id for the '<em><b>Bus</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -474,10 +474,10 @@ public interface Unifilar290922Package extends EPackage {
 	EReference getBus_Line();
 
 	/**
-	 * Returns the meta object for the reference list '{@link unifilar290922.Bus#getLoadBusAssociation <em>Load Bus Association</em>}'.
+	 * Returns the meta object for the containment reference list '{@link unifilar290922.Bus#getLoadBusAssociation <em>Load Bus Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Load Bus Association</em>'.
+	 * @return the meta object for the containment reference list '<em>Load Bus Association</em>'.
 	 * @see unifilar290922.Bus#getLoadBusAssociation()
 	 * @see #getBus()
 	 * @generated
@@ -485,10 +485,10 @@ public interface Unifilar290922Package extends EPackage {
 	EReference getBus_LoadBusAssociation();
 
 	/**
-	 * Returns the meta object for the reference list '{@link unifilar290922.Bus#getGeneratorBusAssociation <em>Generator Bus Association</em>}'.
+	 * Returns the meta object for the containment reference list '{@link unifilar290922.Bus#getGeneratorBusAssociation <em>Generator Bus Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Generator Bus Association</em>'.
+	 * @return the meta object for the containment reference list '<em>Generator Bus Association</em>'.
 	 * @see unifilar290922.Bus#getGeneratorBusAssociation()
 	 * @see #getBus()
 	 * @generated
@@ -527,10 +527,10 @@ public interface Unifilar290922Package extends EPackage {
 	EClass getLoadBusAssociation();
 
 	/**
-	 * Returns the meta object for the reference '{@link unifilar290922.LoadBusAssociation#getBus <em>Bus</em>}'.
+	 * Returns the meta object for the container reference '{@link unifilar290922.LoadBusAssociation#getBus <em>Bus</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Bus</em>'.
+	 * @return the meta object for the container reference '<em>Bus</em>'.
 	 * @see unifilar290922.LoadBusAssociation#getBus()
 	 * @see #getLoadBusAssociation()
 	 * @generated
@@ -591,10 +591,10 @@ public interface Unifilar290922Package extends EPackage {
 	EReference getGeneratorBusAssociation_Generator();
 
 	/**
-	 * Returns the meta object for the reference '{@link unifilar290922.GeneratorBusAssociation#getBus <em>Bus</em>}'.
+	 * Returns the meta object for the container reference '{@link unifilar290922.GeneratorBusAssociation#getBus <em>Bus</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Bus</em>'.
+	 * @return the meta object for the container reference '<em>Bus</em>'.
 	 * @see unifilar290922.GeneratorBusAssociation#getBus()
 	 * @see #getGeneratorBusAssociation()
 	 * @generated
@@ -703,7 +703,7 @@ public interface Unifilar290922Package extends EPackage {
 		EReference BUS__LINE = eINSTANCE.getBus_Line();
 
 		/**
-		 * The meta object literal for the '<em><b>Load Bus Association</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Load Bus Association</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -711,7 +711,7 @@ public interface Unifilar290922Package extends EPackage {
 		EReference BUS__LOAD_BUS_ASSOCIATION = eINSTANCE.getBus_LoadBusAssociation();
 
 		/**
-		 * The meta object literal for the '<em><b>Generator Bus Association</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Generator Bus Association</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -747,7 +747,7 @@ public interface Unifilar290922Package extends EPackage {
 		EClass LOAD_BUS_ASSOCIATION = eINSTANCE.getLoadBusAssociation();
 
 		/**
-		 * The meta object literal for the '<em><b>Bus</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Bus</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -799,7 +799,7 @@ public interface Unifilar290922Package extends EPackage {
 		EReference GENERATOR_BUS_ASSOCIATION__GENERATOR = eINSTANCE.getGeneratorBusAssociation_Generator();
 
 		/**
-		 * The meta object literal for the '<em><b>Bus</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Bus</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

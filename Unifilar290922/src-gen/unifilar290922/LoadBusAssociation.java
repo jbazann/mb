@@ -23,24 +23,24 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface LoadBusAssociation extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Bus</b></em>' reference.
+	 * Returns the value of the '<em><b>Bus</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link unifilar290922.Bus#getLoadBusAssociation <em>Load Bus Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bus</em>' reference.
+	 * @return the value of the '<em>Bus</em>' container reference.
 	 * @see #setBus(Bus)
 	 * @see unifilar290922.Unifilar290922Package#getLoadBusAssociation_Bus()
 	 * @see unifilar290922.Bus#getLoadBusAssociation
-	 * @model opposite="loadBusAssociation" required="true"
+	 * @model opposite="loadBusAssociation" required="true" transient="false"
 	 * @generated
 	 */
 	Bus getBus();
 
 	/**
-	 * Sets the value of the '{@link unifilar290922.LoadBusAssociation#getBus <em>Bus</em>}' reference.
+	 * Sets the value of the '{@link unifilar290922.LoadBusAssociation#getBus <em>Bus</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bus</em>' reference.
+	 * @param value the new value of the '<em>Bus</em>' container reference.
 	 * @see #getBus()
 	 * @generated
 	 */

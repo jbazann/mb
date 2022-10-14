@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import unifilar290922.Bus;
 import unifilar290922.Load;
 import unifilar290922.LoadBusAssociation;
@@ -31,16 +31,6 @@ import unifilar290922.Unifilar290922Package;
  * @generated
  */
 public class LoadBusAssociationImpl extends MinimalEObjectImpl.Container implements LoadBusAssociation {
-	/**
-	 * The cached value of the '{@link #getBus() <em>Bus</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBus()
-	 * @generated
-	 * @ordered
-	 */
-	protected Bus bus;
-
 	/**
 	 * The cached value of the '{@link #getLoad() <em>Load</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -76,25 +66,9 @@ public class LoadBusAssociationImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	public Bus getBus() {
-		if (bus != null && bus.eIsProxy()) {
-			InternalEObject oldBus = (InternalEObject) bus;
-			bus = (Bus) eResolveProxy(oldBus);
-			if (bus != oldBus) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Unifilar290922Package.LOAD_BUS_ASSOCIATION__BUS, oldBus, bus));
-			}
-		}
-		return bus;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Bus basicGetBus() {
-		return bus;
+		if (eContainerFeatureID() != Unifilar290922Package.LOAD_BUS_ASSOCIATION__BUS)
+			return null;
+		return (Bus) eInternalContainer();
 	}
 
 	/**
@@ -103,16 +77,7 @@ public class LoadBusAssociationImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	public NotificationChain basicSetBus(Bus newBus, NotificationChain msgs) {
-		Bus oldBus = bus;
-		bus = newBus;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Unifilar290922Package.LOAD_BUS_ASSOCIATION__BUS, oldBus, newBus);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
+		msgs = eBasicSetContainer((InternalEObject) newBus, Unifilar290922Package.LOAD_BUS_ASSOCIATION__BUS, msgs);
 		return msgs;
 	}
 
@@ -122,11 +87,13 @@ public class LoadBusAssociationImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	public void setBus(Bus newBus) {
-		if (newBus != bus) {
+		if (newBus != eInternalContainer()
+				|| (eContainerFeatureID() != Unifilar290922Package.LOAD_BUS_ASSOCIATION__BUS && newBus != null)) {
+			if (EcoreUtil.isAncestor(this, newBus))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
-			if (bus != null)
-				msgs = ((InternalEObject) bus).eInverseRemove(this, Unifilar290922Package.BUS__LOAD_BUS_ASSOCIATION,
-						Bus.class, msgs);
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
 			if (newBus != null)
 				msgs = ((InternalEObject) newBus).eInverseAdd(this, Unifilar290922Package.BUS__LOAD_BUS_ASSOCIATION,
 						Bus.class, msgs);
@@ -215,9 +182,8 @@ public class LoadBusAssociationImpl extends MinimalEObjectImpl.Container impleme
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Unifilar290922Package.LOAD_BUS_ASSOCIATION__BUS:
-			if (bus != null)
-				msgs = ((InternalEObject) bus).eInverseRemove(this, Unifilar290922Package.BUS__LOAD_BUS_ASSOCIATION,
-						Bus.class, msgs);
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
 			return basicSetBus((Bus) otherEnd, msgs);
 		case Unifilar290922Package.LOAD_BUS_ASSOCIATION__LOAD:
 			if (load != null)
@@ -250,12 +216,25 @@ public class LoadBusAssociationImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+		case Unifilar290922Package.LOAD_BUS_ASSOCIATION__BUS:
+			return eInternalContainer().eInverseRemove(this, Unifilar290922Package.BUS__LOAD_BUS_ASSOCIATION, Bus.class,
+					msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Unifilar290922Package.LOAD_BUS_ASSOCIATION__BUS:
-			if (resolve)
-				return getBus();
-			return basicGetBus();
+			return getBus();
 		case Unifilar290922Package.LOAD_BUS_ASSOCIATION__LOAD:
 			if (resolve)
 				return getLoad();
@@ -309,7 +288,7 @@ public class LoadBusAssociationImpl extends MinimalEObjectImpl.Container impleme
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Unifilar290922Package.LOAD_BUS_ASSOCIATION__BUS:
-			return bus != null;
+			return getBus() != null;
 		case Unifilar290922Package.LOAD_BUS_ASSOCIATION__LOAD:
 			return load != null;
 		}

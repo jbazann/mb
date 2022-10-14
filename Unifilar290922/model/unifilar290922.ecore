@@ -20,9 +20,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="line" upperBound="-1" eType="#//Line"
         eOpposite="#//Line/bus"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="loadBusAssociation" upperBound="-1"
-        eType="#//LoadBusAssociation" eOpposite="#//LoadBusAssociation/bus"/>
+        eType="#//LoadBusAssociation" containment="true" eOpposite="#//LoadBusAssociation/bus"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatorBusAssociation"
-        upperBound="-1" eType="#//GeneratorBusAssociation" eOpposite="#//GeneratorBusAssociation/bus"/>
+        upperBound="-1" eType="#//GeneratorBusAssociation" containment="true" eOpposite="#//GeneratorBusAssociation/bus"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Line">
     <eStructuralFeatures xsi:type="ecore:EReference" name="bus" lowerBound="2" upperBound="2"

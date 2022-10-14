@@ -20,8 +20,8 @@
     </genClasses>
     <genClasses ecoreClass="unifilar290922.ecore#//Bus">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unifilar290922.ecore#//Bus/line"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unifilar290922.ecore#//Bus/loadBusAssociation"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unifilar290922.ecore#//Bus/generatorBusAssociation"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference unifilar290922.ecore#//Bus/loadBusAssociation"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference unifilar290922.ecore#//Bus/generatorBusAssociation"/>
     </genClasses>
     <genClasses ecoreClass="unifilar290922.ecore#//Line">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference unifilar290922.ecore#//Line/bus"/>
